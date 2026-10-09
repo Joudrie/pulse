@@ -1,0 +1,13 @@
+{
+  "name": "pulse",
+  "private": true,
+  "type": "module",
+  "description": "Daily trend tracker for Roblox games: players, growth and estimated revenue over time.",
+  "scripts": {
+    "collect": "node scripts/collect.mjs",
+    "build": "node scripts/build.mjs",
+    "refresh": "node scripts/collect.mjs && node scripts/build.mjs",
+    "serve": "node scripts/build.mjs && npx --yes serve dist"
+  },
+  "engines": { "node": ">=20" }
+}

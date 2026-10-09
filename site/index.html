@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pulse · Roblox game trends</title>
+<meta name="description" content="Which Roblox games are growing, how many people play them, and roughly what they earn, tracked every day.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <div class="brand">
+      <h1>Pulse</h1>
+      <p class="tagline">Roblox games: who's playing, who's growing, who's earning</p>
+    </div>
+    <p class="status" id="status">Loading</p>
+  </div>
+  <div class="wrap controls">
+    <div class="range" role="radiogroup" aria-label="Time range" id="range"></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="note" id="coverage" hidden></p>
+
+  <section class="overview" aria-labelledby="overview-h">
+    <h2 id="overview-h" class="visually-hidden">Overview</h2>
+    <dl class="figures" id="figures"></dl>
+    <figure class="chart-block">
+      <figcaption>
+        <span class="chart-title">Players online across tracked games</span>
+        <span class="chart-sub" id="platform-sub"></span>
+      </figcaption>
+      <div class="chart" id="platform-chart"></div>
+      <details class="table-view"><summary>Data table</summary><div id="platform-table"></div></details>
+    </figure>
+  </section>
+
+  <section class="split">
+    <section class="genres" aria-labelledby="genres-h">
+      <div class="section-head">
+        <h2 id="genres-h">Genres</h2>
+        <div class="toggle" role="radiogroup" aria-label="Measure genres by" id="genre-metric">
+          <button type="button" role="radio" data-metric="players" aria-checked="true">Players</button>
+          <button type="button" role="radio" data-metric="revenue" aria-checked="false">Revenue</button>
+        </div>
+      </div>
+      <p class="hint">Share of the tracked total. Pick a genre to filter the leaderboard.</p>
+      <ol class="bars" id="genre-bars"></ol>
+    </section>
+
+    <section class="board" aria-labelledby="board-h">
+      <div class="section-head">
+        <h2 id="board-h">Leaderboard</h2>
+        <input type="search" id="search" placeholder="Find a game" aria-label="Find a game" autocomplete="off">
+      </div>
+      <div class="tabs" role="tablist" aria-label="Rank by" id="board-tabs"></div>
+      <p class="hint" id="board-hint"></p>
+      <p class="filter" id="filter" hidden></p>
+      <div class="table-wrap">
+        <table class="games" id="games">
+          <thead>
+            <tr>
+              <th scope="col" class="num">#</th>
+              <th scope="col">Game</th>
+              <th scope="col" class="spark-col">Players</th>
+              <th scope="col" class="num">Avg online</th>
+              <th scope="col" class="num">Change</th>
+              <th scope="col" class="num">Est. revenue</th>
+              <th scope="col" class="num" title="Position on Roblox's own Top Earning chart">Roblox earning rank</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <button type="button" class="more" id="more" hidden>Show more</button>
+    </section>
+  </section>
+
+  <section class="detail" id="detail" hidden aria-live="polite"></section>
+
+  <footer class="foot">
+    <h2>Where the numbers come from</h2>
+    <p><strong>Players, visits, favorites and chart positions</strong> come from Roblox's public API, collected every three hours. A day's "avg online" is the average of that day's samples. Only games that appear on one of Roblox's charts (or did in the last 30 days) are tracked, so platform totals cover those games, not all of Roblox.</p>
+    <p><strong>Revenue is an estimate.</strong> Roblox doesn't publish what games earn. Each day's new visits are multiplied by <span id="rpv"></span> per visit, the formula <a href="https://profitable.app/roblox/genres" rel="noopener">Profitable.app</a> publishes (2% of visits spend, 150 Robux average, 70% developer share, $0.0038 per Robux). Games that sell well per player will be under-counted, and the reverse. The "Roblox earning rank" column is Roblox's own Top Earning chart, which ranks real earnings but shows no amounts.</p>
+    <p>For history from before this tracker started, open a game and follow the links to RoTrends, RoMonitor, RoWatcher or Profitable.app.</p>
+  </footer>
+</main>
+
+<div class="tip" id="tip" role="tooltip" hidden></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
