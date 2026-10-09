@@ -14,22 +14,46 @@ const DATA = new URL('../data/', import.meta.url);
 const DAYS = new URL('days/', DATA);
 const BATCH = 50;            // games.roblox.com refuses more than 50 ids per call
 const MAX_SORT_PAGES = 12;
-const KEEP_TRACKING_DAYS = 30; // keep following a game this long after it leaves every chart
+const KEEP_TRACKING_DAYS = 30;
+const PACE = 1200;           // ms between API calls // keep following a game this long after it leaves every chart
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
-async function getJSON(url, tries = 4) {
-  for (let i = 0; i < tries; i++) {
+// GitHub's runners share IP addresses, so Roblox rate-limits them far sooner than a
+// home connection. On a 429 wait it out (honouring Retry-After), up to ~3 minutes in all.
+const BACKOFF = [5, 10, 20, 30, 45, 60]; // seconds
+async function getJSON(url) {
+  for (let i = 0; ; i++) {
+    let wait;
     try {
       const res = await fetch(url, { headers: { 'user-agent': 'pulse-trends/1.0 (+github actions)', accept: 'application/json' } });
-      if (res.status === 429 || res.status >= 500) throw new Error(`HTTP ${res.status}`);
-      if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
-      return await res.json();
+      if (res.ok) return await res.json();
+      if (res.status !== 429 && res.status < 500) throw Object.assign(new Error(`HTTP ${res.status} for ${url}`), { fatal: true });
+      wait = Math.max(Number(res.headers.get('retry-after')) || 0, BACKOFF[i] ?? 0);
+      if (i >= BACKOFF.length) throw new Error(`HTTP ${res.status} after ${BACKOFF.length} retries`);
+      console.warn(`HTTP ${res.status}, waiting ${wait}s (${new URL(url).hostname})`);
     } catch (err) {
-      if (i === tries - 1) throw err;
-      await sleep(1500 * 2 ** i);
+      if (err.fatal || i >= BACKOFF.length) throw err;
+      wait ??= BACKOFF[i];
     }
+    await sleep(wait * 1000);
   }
+}
+
+// One batch failing shouldn't cost the whole day: skip it and keep the rest.
+async function batched(ids, url, onItem) {
+  let failed = 0;
+  for (const batch of chunks(ids, BATCH)) {
+    try {
+      const d = await getJSON(url(batch));
+      for (const item of d.data ?? []) onItem(item);
+    } catch (err) {
+      failed += batch.length;
+      console.warn(`Skipped ${batch.length} games: ${err.message}`);
+    }
+    await sleep(PACE);
+  }
+  return failed;
 }
 
 async function readJSON(url, fallback) {
@@ -53,7 +77,7 @@ async function fetchCharts() {
     }
     token = d.nextSortsPageToken;
     if (!token) break;
-    await sleep(300);
+    await sleep(PACE);
   }
   return sorts;
 }
@@ -75,17 +99,10 @@ async function main() {
   const ids = [...new Set([...charted, ...recent])];
 
   const details = {};
-  for (const batch of chunks(ids, BATCH)) {
-    const d = await getJSON(`https://games.roblox.com/v1/games?universeIds=${batch.join(',')}`);
-    for (const g of d.data ?? []) details[g.id] = g;
-    await sleep(250);
-  }
+  const missed = await batched(ids, b => `https://games.roblox.com/v1/games?universeIds=${b.join(',')}`, g => { details[g.id] = g; });
+  if (!Object.keys(details).length) throw new Error('Roblox returned no game data; nothing saved.');
   const votes = {};
-  for (const batch of chunks(ids, BATCH)) {
-    const d = await getJSON(`https://games.roblox.com/v1/games/votes?universeIds=${batch.join(',')}`);
-    for (const v of d.data ?? []) votes[v.id] = v;
-    await sleep(250);
-  }
+  await batched(ids, b => `https://games.roblox.com/v1/games/votes?universeIds=${b.join(',')}`, v => { votes[v.id] = v; });
 
   // Metadata: names change (seasonal emoji prefixes), so refresh them every run.
   for (const id of ids) {
@@ -111,7 +128,7 @@ async function main() {
       const d = await getJSON(`https://thumbnails.roblox.com/v1/games/icons?universeIds=${batch.join(',')}&returnPolicy=PlaceHolder&size=150x150&format=Webp&isCircular=false`);
       for (const im of d.data ?? []) if (im.state === 'Completed' && meta.games[im.targetId]) meta.games[im.targetId].icon = im.imageUrl;
     } catch (err) { console.warn('icons:', err.message); }
-    await sleep(250);
+    await sleep(PACE);
   }
 
   // Today's file. `ids` only ever grows during a day; every per-game array lines up with it.
@@ -146,7 +163,7 @@ async function main() {
   meta.updated = t;
   await writeFile(new URL('meta.json', DATA), JSON.stringify(meta, null, 1));
   const online = ccu.reduce((a, b) => a + (b ?? 0), 0);
-  console.log(`${t}: ${Object.keys(details).length} games, ${sorts.length} charts, ${online.toLocaleString('en-US')} players online on tracked games, sample ${day.samples.length} of ${date}`);
+  console.log(`${t}: ${Object.keys(details).length} games, ${sorts.length} charts, ${online.toLocaleString('en-US')} players online on tracked games, sample ${day.samples.length} of ${date}${missed ? `, ${missed} skipped after rate limits` : ''}`);
 }
 
 main().catch(err => { console.error(err); process.exit(1); });
