@@ -95,8 +95,9 @@ function renderOverview(R) {
       R.totals.revenue == null ? 'needs snapshots an hour apart; check back soon' : R.totals.provisional ? 'estimate; partly extrapolated from the first day' : 'estimate from new visits'),
     figure('Games tracked', fmtN(R.totals.games, true), `${S.charts.length} Roblox charts followed`),
   );
-  const intraday = R.key === '1D';
-  $('platform-sub').textContent = intraday ? `Every sample in the last 24 hours, ${R.line.length} so far` : `Daily average, ${day(R.from)} to ${day(R.to)}`;
+  const intraday = R.bySample;
+  $('platform-sub').textContent = intraday ? `Every snapshot in the last 24 hours, ${R.line.length} so far`
+    : R.key === '1D' ? 'Last 7 days, one snapshot a day' : `Daily snapshot, ${day(R.from)} to ${day(R.to)}`;
   const box = $('platform-chart');
   responsive(box, () => lineChart(box, R.line, {
     color: cssVar('--players'), label: 'Players online',
@@ -148,7 +149,7 @@ function renderGenres(R) {
 function changeCell(r) {
   const td = document.createElement('td');
   td.className = 'num';
-  if (r.change == null) { td.textContent = '–'; td.classList.add('dim'); td.title = 'Needs at least two samples'; return td; }
+  if (r.change == null) { td.textContent = '–'; td.classList.add('dim'); td.title = 'Needs two days of data'; return td; }
   const span = document.createElement('span');
   const up = r.change >= 0;
   span.className = `chg ${up ? 'up' : 'down'}`;
@@ -214,7 +215,7 @@ function renderBoard(R) {
   }));
   if (!rows.length) {
     const tr = tbody.insertRow(); const td = tr.insertCell(); td.colSpan = 7; td.className = 'dim';
-    td.textContent = state.board === 'rising' ? 'Needs at least two samples per game. Check back after the next update.'
+    td.textContent = state.board === 'rising' ? 'Needs two days of data per game. Check back after tomorrow\'s update.'
       : state.board === 'earning' && !state.q && !state.genre ? 'Revenue needs two visit counts at least an hour apart. Check back after the next update.' : 'No games match.';
   }
   const more = $('more');
@@ -277,16 +278,16 @@ async function openGame(id, scroll = true) {
     fig.append(cap, c); charts.append(fig);
     return c;
   };
-  const intraday = R.key === '1D';
-  const cPlayers = block('Players online', intraday ? 'Every sample, last 24 hours' : 'Daily average');
-  const cRevenue = block('Estimated revenue per day', intraday ? 'Last 7 days' : `${R.label}`);
+  const intraday = R.bySample;
+  const cPlayers = block('Players online', intraday ? 'Every snapshot, last 24 hours' : R.key === '1D' ? 'Last 7 days' : 'Daily snapshot');
+  const cRevenue = block('Estimated revenue per day', R.key === '1D' ? 'Last 7 days' : `${R.label}`);
   box.append(head, links, facts, charts);
   if (scroll) box.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
 
   let G;
   try { G = await (await fetch(`data/games/${id}.json`)).json(); } catch { cPlayers.textContent = 'Could not load this game.'; return; }
   if (state.open !== id) return;
-  const n = intraday ? 7 : Math.min(R.days, G.dates.length);
+  const n = R.key === '1D' ? Math.min(7, G.dates.length) : Math.min(R.days, G.dates.length);
   const from = G.dates.length - n;
   const daily = G.dates.slice(from).map((d, i) => ({ x: d, y: G.ccu[from + i] }));
   const rev = G.dates.slice(from).map((d, i) => ({ x: d, y: G.revenue[from + i], provisional: G.provisional[from + i] }));

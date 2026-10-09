@@ -99,6 +99,10 @@ async function main() {
       if (lastT - t <= 24 * 36e5) intraday.push({ t: s.t, ids: day.ids, ccu: s.ccu });
     }
   }
+  // With one scheduled snapshot a day, the Day view only has extra samples after manual
+  // refreshes. Until there are three, it shows the last week of daily values instead.
+  const bySample = intraday.length >= 3;
+  const weekFrom = Math.max(0, dates.length - 7);
 
   const growth = (cur, prev) => (cur != null && prev != null && prev > 0 ? (cur - prev) / prev : null);
 
@@ -122,7 +126,7 @@ async function main() {
 
       if (r.key === '1D') {
         const pts = intraday.map(s => { const i = s.ids.indexOf(id); return i < 0 ? null : s.ccu[i] ?? null; });
-        spark = downsample(pts, SPARK_POINTS);
+        spark = downsample(bySample ? pts : g.ccu.slice(weekFrom), SPARK_POINTS);
         if (dates.length >= 2 && g.ccu.at(-2) != null) { change = growth(g.ccu.at(-1), g.ccu.at(-2)); basis = 'vs previous day'; }
         else { const v = pts.filter(x => x != null); if (v.length >= 2) { change = growth(v.at(-1), v[0]); basis = 'since first sample'; } }
       } else {
@@ -160,7 +164,8 @@ async function main() {
 
     // Platform line: total players online on tracked games, per sample (Day) or per day.
     let line;
-    if (r.key === '1D') line = intraday.map(s => ({ x: s.t, y: sum(s.ccu) }));
+    if (r.key === '1D' && bySample) line = intraday.map(s => ({ x: s.t, y: sum(s.ccu) }));
+    else if (r.key === '1D') line = dates.slice(weekFrom).map((d, k) => ({ x: d, y: round(sum([...games.values()].map(g => g.ccu[weekFrom + k]))) }));
     else line = span.map((d, k) => ({ x: d, y: round(sum([...games.values()].map(g => g.ccu[from + k]))) }));
     const revenueLine = span.map((d, k) => ({ x: d, y: round(total([...games.values()].map(g => g.revenue[from + k]))) }));
 
@@ -173,7 +178,7 @@ async function main() {
     }
 
     ranges[r.key] = {
-      key: r.key, label: r.label, days: r.days,
+      key: r.key, label: r.label, days: r.days, bySample: r.key === '1D' && bySample,
       from: span[0], to: endDate, coverage: n, // days of data inside the range
       totals: {
         players: round(mean(line.map(p => p.y))), revenue: round(total(revenueLine.map(p => p.y))), games: rows.length,

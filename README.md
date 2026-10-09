@@ -6,12 +6,12 @@ who's earning, over a day, week, month, 3 months, 6 months or a year.
 ## How it works
 
 ```
-collect (every 3 h)  →  data/days/YYYY-MM-DD.json  →  build  →  static site on GitHub Pages
+collect (daily)  →  data/days/YYYY-MM-DD.json  →  build  →  static site on GitHub Pages
 ```
 
 | Step | Script | What it does |
 |---|---|---|
-| Collect | `scripts/collect.mjs` | Reads Roblox's own charts (Top Earning, Up-and-Coming, Top Trending, per-genre trending and more), then players online, visits, favorites and votes for every game on them. Appends one sample to today's file. |
+| Collect | `scripts/collect.mjs` | Reads Roblox's own charts (Top Earning, Up-and-Coming, Top Trending, per-genre trending and more), then players online, visits, favorites and votes for every game on them. Appends one snapshot to today's file. Manual runs add extra snapshots to the same day. |
 | Build | `scripts/build.mjs` | Turns the daily files into per-range leaderboards, genre shares, the platform line and one history file per game, then copies `site/` into `dist/`. |
 
 All data comes from Roblox's public API (no key). Games stay tracked for 30 days
@@ -38,5 +38,5 @@ Node 20+, no dependencies.
 
 1. Push this folder to a new public repo.
 2. **Settings → Pages → Source: GitHub Actions.**
-3. **Actions → Refresh → Run workflow** for the first snapshot. After that it runs every 3 hours.
+3. **Actions → Refresh → Run workflow** for the first snapshot. After that it runs once a day at 20:17 UTC.
    The site's "Refresh now" link opens the same button.

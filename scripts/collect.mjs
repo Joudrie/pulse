@@ -1,6 +1,6 @@
 // Takes one snapshot of Roblox's public game data and appends it to today's file.
-// Run it as often as you like (the workflow runs it every 3 hours); each run adds
-// one players-online sample, so a day's average and peak get better with more runs.
+// The workflow runs it once a day; a manual run adds another sample to the same
+// day, so that day's average and peak use both.
 //
 // Sources (all public, no key):
 //   apis.roblox.com/explore-api   Roblox's own charts (Top Earning, Up-and-Coming, ...)

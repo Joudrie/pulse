@@ -1,10 +1,10 @@
 name: Refresh
 
-# Every 3 hours: take a snapshot of Roblox's public game data, rebuild the site, deploy.
-# More samples per day = a truer daily average and peak.
+# Once a day: take a snapshot of Roblox's public game data, rebuild the site, deploy.
+# Same time every day (afternoon in the US) so days compare fairly.
 on:
   schedule:
-    - cron: "17 */3 * * *"
+    - cron: "17 20 * * *"
   workflow_dispatch: # the "Refresh now" link on the site opens this; press "Run workflow"
 
 permissions:
