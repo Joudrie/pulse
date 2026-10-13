@@ -379,7 +379,7 @@
   },
   "212154879": {
    "firstSeen": "2026-10-11",
-   "name": "[New Merchant🌑] Swordburst 2",
+   "name": "[Wave Defense🗡️] Swordburst 2",
    "creator": "Swordburst 2",
    "verified": true,
    "genre": "RPG",
@@ -509,7 +509,7 @@
   },
   "383310974": {
    "firstSeen": "2026-10-09",
-   "name": "[🎃] Adopt Me!",
+   "name": "[✏️2D TUESDAY] Adopt Me!",
    "creator": "Uplift Games",
    "verified": true,
    "genre": "Roleplay & Avatar Sim",
@@ -660,7 +660,7 @@
    "created": "2018-09-05",
    "place": 2317712696,
    "maxPlayers": 30,
-   "lastCharted": "2026-10-11",
+   "lastCharted": "2026-10-13",
    "icon": "https://tr.rbxcdn.com/180DAY-a60fb2ef644cca939f1b14b496fb8040/150/150/Image/Webp/noFilter"
   },
   "833209132": {
@@ -1546,6 +1546,19 @@
    "lastCharted": "2026-10-13",
    "icon": "https://tr.rbxcdn.com/180DAY-b0716f49716d1c9cc4d29c85b233c5c8/150/150/Image/Webp/noFilter"
   },
+  "1861512506": {
+   "firstSeen": "2026-10-13",
+   "name": "surf",
+   "creator": "StrafesNET",
+   "verified": false,
+   "genre": "Obby & Platformer",
+   "subgenre": "",
+   "created": "2020-07-09",
+   "place": 5315066937,
+   "maxPlayers": 16,
+   "lastCharted": "2026-10-13",
+   "icon": "https://tr.rbxcdn.com/180DAY-b247a4c7a67ea994bc58aacdaa5daa25/150/150/Image/Webp/noFilter"
+  },
   "1871172282": {
    "firstSeen": "2026-10-09",
    "name": "💀 Backstretch Battles Racing",
@@ -2274,6 +2287,19 @@
    "lastCharted": "2026-10-11",
    "icon": "https://tr.rbxcdn.com/180DAY-bcd4e66c938697f569d3fabfba5bc8d9/150/150/Image/Webp/noFilter"
   },
+  "3021395192": {
+   "firstSeen": "2026-10-13",
+   "name": "RIOTFALL [FPS]",
+   "creator": "Rodeo Interactive",
+   "verified": false,
+   "genre": "Shooter",
+   "subgenre": "Deathmatch Shooter",
+   "created": "2021-10-21",
+   "place": 7796842481,
+   "maxPlayers": 12,
+   "lastCharted": "2026-10-13",
+   "icon": "https://tr.rbxcdn.com/180DAY-6bc1a731eebb84fc4e73bfb963380087/150/150/Image/Webp/noFilter"
+  },
   "3047037061": {
    "firstSeen": "2026-10-09",
    "name": "bLockerman's Minesweeper",
@@ -2380,7 +2406,7 @@
   },
   "3168615253": {
    "firstSeen": "2026-10-09",
-   "name": "[UPDATE] Ability Wars",
+   "name": "Ability Wars",
    "creator": "Ability Wars",
    "verified": true,
    "genre": "Action",
@@ -3473,7 +3499,7 @@
   "10767922762": {
    "firstSeen": "2026-10-09",
    "name": "Dress Designer",
-   "creator": "dude imaginative",
+   "creator": "Wisterium",
    "verified": false,
    "genre": "Roleplay & Avatar Sim",
    "subgenre": "Dress Up",
@@ -3671,7 +3697,7 @@
    "creator": "Scaryneff73",
    "verified": false,
    "genre": "Simulation",
-   "subgenre": "",
+   "subgenre": "Physics Sim",
    "created": "2026-09-10",
    "place": 111702513024754,
    "maxPlayers": 20,
@@ -3862,7 +3888,7 @@
   },
   "5026122481": {
    "firstSeen": "2026-10-09",
-   "name": "Death in the Box",
+   "name": "[🎃👻] Death in the Box",
    "creator": "ARK-ADE",
    "verified": true,
    "genre": "Survival",
@@ -4299,7 +4325,7 @@
    "created": "2026-09-10",
    "place": 89678439944901,
    "maxPlayers": 7,
-   "lastCharted": "2026-10-10",
+   "lastCharted": "2026-10-13",
    "icon": "https://tr.rbxcdn.com/180DAY-1f71d7ed1c0a59134c901de45e1301a4/150/150/Image/Webp/noFilter"
   },
   "10765785152": {
@@ -4460,14 +4486,14 @@
   },
   "10768468695": {
    "firstSeen": "2026-10-09",
-   "name": "⚡ELECTRICITY🔥Bricklayer",
+   "name": "🔌ELECTRICITY🔥Bricklayer",
    "creator": "TB Software",
    "verified": false,
    "genre": "Simulation",
    "subgenre": "Sandbox",
    "created": "2026-09-28",
    "place": 100877684758792,
-   "maxPlayers": 5,
+   "maxPlayers": 7,
    "lastCharted": "2026-10-13",
    "icon": "https://tr.rbxcdn.com/180DAY-b504c51cb6a0400d84e91d628452078b/150/150/Image/Webp/noFilter"
   },
@@ -4519,13 +4545,13 @@
    "subgenre": "Quiz",
    "created": "2026-09-24",
    "place": 81548692127925,
-   "maxPlayers": 24,
+   "maxPlayers": 36,
    "lastCharted": "2026-10-13",
    "icon": "https://tr.rbxcdn.com/180DAY-a8c988b7eb7f83b497458b62ea115bcc/150/150/Image/Webp/noFilter"
   },
   "10769037074": {
    "firstSeen": "2026-10-09",
-   "name": "[🎃] Rally Panic! [2 PLAYER RALLY]",
+   "name": "[🎃] Rally Panic! [2 Player Rally]",
    "creator": "nonlethal studios",
    "verified": false,
    "genre": "Sports & Racing",
@@ -4603,7 +4629,7 @@
   },
   "10766057873": {
    "firstSeen": "2026-10-09",
-   "name": "[UPD] drive home",
+   "name": "drive home",
    "creator": "we the goats!",
    "verified": false,
    "genre": "Adventure",
@@ -4616,7 +4642,7 @@
   },
   "10765563835": {
    "firstSeen": "2026-10-09",
-   "name": "[UPD] Sniper VS 99 Players",
+   "name": "[🎃] Sniper VS 99 Players",
    "creator": "Sniper Vs 99 Players",
    "verified": false,
    "genre": "Survival",
@@ -4689,7 +4715,7 @@
    "created": "2026-09-13",
    "place": 109170952597926,
    "maxPlayers": 12,
-   "lastCharted": "2026-10-10",
+   "lastCharted": "2026-10-13",
    "icon": "https://tr.rbxcdn.com/180DAY-16d2220fed45f9e823389ffafde94253/150/150/Image/Webp/noFilter"
   },
   "10766721625": {
@@ -4785,7 +4811,7 @@
   },
   "10765906597": {
    "firstSeen": "2026-10-09",
-   "name": "[Halloween Event 🎃] Clean all the Balls",
+   "name": "[🎃] Clean all the Balls",
    "creator": "Little Green Studios",
    "verified": false,
    "genre": "Simulation",
@@ -5006,7 +5032,7 @@
   },
   "10708913337": {
    "firstSeen": "2026-10-09",
-   "name": "[🍀UPD 8] Anime Dice",
+   "name": "[🎉UPD 8] Anime Dice",
    "creator": "More & More Games",
    "verified": true,
    "genre": "Simulation",
@@ -5045,7 +5071,7 @@
   },
   "4839802560": {
    "firstSeen": "2026-10-09",
-   "name": "LifeTogether 🏠 RP [NEW HOUSE]",
+   "name": "LifeTogether 🏠 RP",
    "creator": "Cinnamon Software",
    "verified": true,
    "genre": "Roleplay & Avatar Sim",
@@ -5352,7 +5378,7 @@
    "created": "2026-08-04",
    "place": 132173349090360,
    "maxPlayers": 25,
-   "lastCharted": "2026-10-11",
+   "lastCharted": "2026-10-13",
    "icon": "https://tr.rbxcdn.com/180DAY-8b980458120e2d590b24c91d1ca4cd08/150/150/Image/Webp/noFilter"
   },
   "4658598196": {
@@ -5474,7 +5500,7 @@
   },
   "10742937135": {
    "firstSeen": "2026-10-09",
-   "name": "[Update!] Survive The Hulk 😱",
+   "name": "[Spiderman!] Survive The Hulk 😱",
    "creator": "Survive The Hulk",
    "verified": false,
    "genre": "Survival",
@@ -5560,7 +5586,7 @@
    "created": "2026-06-25",
    "place": 126096010539917,
    "maxPlayers": 8,
-   "lastCharted": "2026-10-11",
+   "lastCharted": "2026-10-13",
    "icon": "https://tr.rbxcdn.com/180DAY-d243b480d322b8e0e313e8da7b40a2c1/150/150/Image/Webp/noFilter"
   },
   "10759638075": {
@@ -5573,7 +5599,7 @@
    "created": "2026-08-24",
    "place": 74629631798007,
    "maxPlayers": 6,
-   "lastCharted": "2026-10-10",
+   "lastCharted": "2026-10-13",
    "icon": "https://tr.rbxcdn.com/180DAY-0438b6d3ab88700813bc607ea8dad1dd/150/150/Image/Webp/noFilter"
   },
   "10762757054": {
@@ -5768,7 +5794,7 @@
    "created": "2026-06-28",
    "place": 140175932233171,
    "maxPlayers": 1,
-   "lastCharted": "2026-10-11",
+   "lastCharted": "2026-10-13",
    "icon": "https://tr.rbxcdn.com/180DAY-d1d6db0bdc5b6f79eca2b65785b8514c/150/150/Image/Webp/noFilter"
   },
   "10153098880": {
@@ -6347,7 +6373,7 @@
    "firstSeen": "2026-10-09",
    "name": "RUNAWAYS [beta]",
    "creator": "supercat games",
-   "verified": false,
+   "verified": true,
    "genre": "Action",
    "subgenre": "Open World Action",
    "created": "2025-04-23",
@@ -6501,7 +6527,7 @@
   },
   "10425789398": {
    "firstSeen": "2026-10-09",
-   "name": "[⚙️Auto P3.1] Regrowth Incremental | ALPHA",
+   "name": "[🛠️Fixes] Regrowth Incremental | ALPHA",
    "creator": "Grind To Ascend",
    "verified": false,
    "genre": "Simulation",
@@ -8295,7 +8321,7 @@
   },
   "10250809822": {
    "firstSeen": "2026-10-09",
-   "name": "Lootbound (HUGE UPDATE)",
+   "name": "Lootbound [NEW DUNGEON]",
    "creator": "Chick-fil-A Studios",
    "verified": false,
    "genre": "RPG",
@@ -8334,7 +8360,7 @@
   },
   "9880286438": {
    "firstSeen": "2026-10-09",
-   "name": "[🍀x2 Luck] Legacy Piece",
+   "name": "[Dante & Vergil] Legacy Piece",
    "creator": "Gwynn's Shrine",
    "verified": true,
    "genre": "RPG",
@@ -8420,7 +8446,7 @@
    "created": "2026-08-19",
    "place": 119242658671952,
    "maxPlayers": 8,
-   "lastCharted": "2026-10-10",
+   "lastCharted": "2026-10-13",
    "icon": "https://tr.rbxcdn.com/180DAY-eed6906fe185a0254370bf28722ccb96/150/150/Image/Webp/noFilter"
   },
   "10764640833": {
@@ -8680,7 +8706,7 @@
    "created": "2024-04-29",
    "place": 17324489187,
    "maxPlayers": 21,
-   "lastCharted": "2026-10-09",
+   "lastCharted": "2026-10-13",
    "icon": "https://tr.rbxcdn.com/180DAY-8e7e8024800a43bccf282216d351311c/150/150/Image/Webp/noFilter"
   },
   "10766971567": {
@@ -9374,7 +9400,7 @@
   },
   "10521797740": {
    "firstSeen": "2026-10-09",
-   "name": "[🍁] 50 Player BINGO!",
+   "name": "[🎃] 50 Player BINGO!",
    "creator": "Turret Sims",
    "verified": true,
    "genre": "Party & Casual",
@@ -9686,7 +9712,7 @@
   },
   "9855761734": {
    "firstSeen": "2026-10-09",
-   "name": "[GANGS] San Diego Roleplay",
+   "name": "San Diego Roleplay",
    "creator": "San Diego Community",
    "verified": false,
    "genre": "Roleplay & Avatar Sim",
@@ -9863,7 +9889,7 @@
    "created": "2026-08-31",
    "place": 107564665870882,
    "maxPlayers": 20,
-   "lastCharted": "2026-10-11",
+   "lastCharted": "2026-10-13",
    "icon": "https://tr.rbxcdn.com/180DAY-b5ce3f438279f2b1dc757a9885a980b4/150/150/Image/Webp/noFilter"
   },
   "9209811415": {
@@ -10006,7 +10032,7 @@
    "created": "2025-07-23",
    "place": 122213771295821,
    "maxPlayers": 20,
-   "lastCharted": "2026-10-09",
+   "lastCharted": "2026-10-13",
    "icon": "https://tr.rbxcdn.com/180DAY-a0b801eef0d793f20e5332aefec3eacd/150/150/Image/Webp/noFilter"
   },
   "10178501358": {
@@ -10064,7 +10090,7 @@
   "10717002748": {
    "firstSeen": "2026-10-09",
    "name": "[W2] +1 DMG FPS",
-   "creator": "Mappy Tappy",
+   "creator": "Mappy Tappy Studios",
    "verified": false,
    "genre": "Simulation",
    "subgenre": "Incremental Simulator",
@@ -10375,7 +10401,7 @@
   },
   "6996253752": {
    "firstSeen": "2026-10-09",
-   "name": " 🔥[UPDATE]🔥Central Streets",
+   "name": "🔥Central Streets🔥",
    "creator": "Central Productions (RP)",
    "verified": true,
    "genre": "Action",
@@ -10674,7 +10700,7 @@
   },
   "5713659018": {
    "firstSeen": "2026-10-09",
-   "name": "[🔥NEW!] Artemis Royale",
+   "name": "[🎃UPD!] Artemis Royale",
    "creator": "Artemis Studios!",
    "verified": true,
    "genre": "Shooter",
@@ -10721,7 +10747,7 @@
    "created": "2025-12-26",
    "place": 71350675430720,
    "maxPlayers": 35,
-   "lastCharted": "2026-10-10",
+   "lastCharted": "2026-10-13",
    "icon": "https://tr.rbxcdn.com/180DAY-510e80ae02fb368fff6c486526e1d109/150/150/Image/Webp/noFilter"
   },
   "7002376067": {
@@ -11259,7 +11285,7 @@
   },
   "10769452490": {
    "firstSeen": "2026-10-10",
-   "name": "[UPDATE] RALLY WITH A FRIEND ",
+   "name": "RALLY WITH A FRIEND [+1]",
    "creator": "Porchlight Studios",
    "verified": false,
    "genre": "Sports & Racing",
@@ -11350,7 +11376,7 @@
   },
   "10766588474": {
    "firstSeen": "2026-10-10",
-   "name": "[🎃] PORTALS",
+   "name": "PORTALS",
    "creator": "PROJECT PORTAL",
    "verified": false,
    "genre": "Shooter",
@@ -11519,7 +11545,7 @@
   },
   "10765841403": {
    "firstSeen": "2026-10-10",
-   "name": "Steal Or Die [NEW EMOTES!]",
+   "name": "Steal Or Die [NEW MAP!]",
    "creator": "Vantage Gameworks",
    "verified": false,
    "genre": "Survival",
@@ -12086,12 +12112,12 @@
    "created": "2023-08-17",
    "place": 14469379009,
    "maxPlayers": 21,
-   "lastCharted": "2026-10-10",
+   "lastCharted": "2026-10-13",
    "icon": "https://tr.rbxcdn.com/180DAY-d8fb081052d4d78cdb018bf6776bbac6/150/150/Image/Webp/noFilter"
   },
   "9073775318": {
    "firstSeen": "2026-10-10",
-   "name": "[OG] Slay A SLime",
+   "name": "[OG] Slay A Slime",
    "creator": "Slime Slaying Online",
    "verified": true,
    "genre": "RPG",
@@ -12936,7 +12962,7 @@
   },
   "9753494457": {
    "firstSeen": "2026-10-13",
-   "name": "🏈 Driven Football [NEW] [OPEN TESTING]",
+   "name": "🏈 Driven Football [UPD🔥] [OPEN TESTING]",
    "creator": "Driven Football Co.",
    "verified": false,
    "genre": "Sports & Racing",
@@ -12978,8 +13004,8 @@
    "name": "Siren's Wake [EARLY ACCESS]",
    "creator": "Siren's Wake",
    "verified": false,
-   "genre": "Unlabeled",
-   "subgenre": "",
+   "genre": "Adventure",
+   "subgenre": "Exploration",
    "created": "2026-09-06",
    "place": 80554766999488,
    "maxPlayers": 10,
@@ -13245,7 +13271,137 @@
    "maxPlayers": 20,
    "lastCharted": "2026-10-13",
    "icon": "https://tr.rbxcdn.com/180DAY-a6e774550716bf5960f59202c8d5a557/150/150/Image/Webp/noFilter"
+  },
+  "10768458048": {
+   "firstSeen": "2026-10-13",
+   "name": "Army Commander Tycoon ",
+   "creator": "sad builderboy",
+   "verified": false,
+   "genre": "Simulation",
+   "subgenre": "Tycoon",
+   "created": "2026-09-28",
+   "place": 119263815547952,
+   "maxPlayers": 8,
+   "lastCharted": "2026-10-13",
+   "icon": "https://tr.rbxcdn.com/180DAY-0c74f6bfd5a3262c1e8901ed0b02c511/150/150/Image/Webp/noFilter"
+  },
+  "10765625118": {
+   "firstSeen": "2026-10-13",
+   "name": "THE CONE",
+   "creator": "• DELTA •",
+   "verified": false,
+   "genre": "Puzzle",
+   "subgenre": "Escape Room",
+   "created": "2026-09-08",
+   "place": 127836473568791,
+   "maxPlayers": 25,
+   "lastCharted": "2026-10-13",
+   "icon": "https://tr.rbxcdn.com/180DAY-b5b7d727caf85e13314b7f824c0ae272/150/150/Image/Webp/noFilter"
+  },
+  "10767774668": {
+   "firstSeen": "2026-10-13",
+   "name": "[🥞] Paint a Pancake",
+   "creator": "Stud Studio Co.",
+   "verified": false,
+   "genre": "Party & Casual",
+   "subgenre": "Coloring & Drawing",
+   "created": "2026-09-23",
+   "place": 97606215092194,
+   "maxPlayers": 20,
+   "lastCharted": "2026-10-13",
+   "icon": "https://tr.rbxcdn.com/180DAY-780e42451291f6ec927acd28b5b2f711/150/150/Image/Webp/noFilter"
+  },
+  "10767814721": {
+   "firstSeen": "2026-10-13",
+   "name": "[⛩️W3]  +1 Karate Evolution",
+   "creator": "Taynx Games",
+   "verified": false,
+   "genre": "Simulation",
+   "subgenre": "Incremental Simulator",
+   "created": "2026-09-24",
+   "place": 137626413669175,
+   "maxPlayers": 8,
+   "lastCharted": "2026-10-13",
+   "icon": "https://tr.rbxcdn.com/180DAY-830edaf9c1be886442d77178ed63cdd9/150/150/Image/Webp/noFilter"
+  },
+  "8965717730": {
+   "firstSeen": "2026-10-13",
+   "name": "100 Players Lava Escape 🔥",
+   "creator": "Colorful Coconut",
+   "verified": true,
+   "genre": "Obby & Platformer",
+   "subgenre": "",
+   "created": "2025-10-17",
+   "place": 135535794227264,
+   "maxPlayers": 100,
+   "lastCharted": "2026-10-13",
+   "icon": "https://tr.rbxcdn.com/180DAY-708be7732b6297690e842fe3f37a05c7/150/150/Image/Webp/noFilter"
+  },
+  "5620182793": {
+   "firstSeen": "2026-10-13",
+   "name": "Skateboard Obby🎃",
+   "creator": "Gorilla Obby",
+   "verified": true,
+   "genre": "Obby & Platformer",
+   "subgenre": "",
+   "created": "2024-02-08",
+   "place": 16288616721,
+   "maxPlayers": 20,
+   "lastCharted": "2026-10-13",
+   "icon": "https://tr.rbxcdn.com/180DAY-1f6e2d81465b85a776170ada717d9968/150/150/Image/Webp/noFilter"
+  },
+  "10641300771": {
+   "firstSeen": "2026-10-13",
+   "name": "[🌈] Color Stack",
+   "creator": "Cool Table Games",
+   "verified": false,
+   "genre": "Puzzle",
+   "subgenre": "",
+   "created": "2026-08-06",
+   "place": 93173930300028,
+   "maxPlayers": 24,
+   "lastCharted": "2026-10-13",
+   "icon": "https://tr.rbxcdn.com/180DAY-6b590f744e4188a4bbc0b6153a493026/150/150/Image/Webp/noFilter"
+  },
+  "10330459049": {
+   "firstSeen": "2026-10-13",
+   "name": "[NEW] Headless Korblox outfits",
+   "creator": "lovedlock",
+   "verified": false,
+   "genre": "Shopping",
+   "subgenre": "Avatar Shopping",
+   "created": "2026-06-15",
+   "place": 128026349982046,
+   "maxPlayers": 8,
+   "lastCharted": "2026-10-13",
+   "icon": "https://tr.rbxcdn.com/180DAY-a8b0de0b51d4890c96e89f217cfad3d9/150/150/Image/Webp/noFilter"
+  },
+  "10064401653": {
+   "firstSeen": "2026-10-13",
+   "name": "🏢 The Company [ALPHA]",
+   "creator": "The Company: Corporate Roleplay",
+   "verified": false,
+   "genre": "Roleplay & Avatar Sim",
+   "subgenre": "",
+   "created": "2026-04-21",
+   "place": 76842920359834,
+   "maxPlayers": 123,
+   "lastCharted": "2026-10-13",
+   "icon": "https://tr.rbxcdn.com/180DAY-fc8222b1efe50664a1ade6bb708517c0/150/150/Image/Webp/noFilter"
+  },
+  "4595016786": {
+   "firstSeen": "2026-10-13",
+   "name": "Barbie DreamHouse Tycoon",
+   "creator": "Gamefam x Barbie",
+   "verified": false,
+   "genre": "Simulation",
+   "subgenre": "Tycoon",
+   "created": "2023-04-17",
+   "place": 13166293021,
+   "maxPlayers": 8,
+   "lastCharted": "2026-10-13",
+   "icon": "https://tr.rbxcdn.com/180DAY-0d9b1623880a2783de09f74e899afbb1/150/150/Image/Webp/noFilter"
   }
  },
- "updated": "2026-10-13T02:03Z"
+ "updated": "2026-10-13T23:44Z"
 }
